@@ -71,9 +71,29 @@ console.log(getLast(pumpkins));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
 
+function find( value, array ){
+  for (let number of array){
+    if (number === value){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 }
+
+console.log(find(4, numbers));
+
+for (let number of numbers){
+  if (number > 4){
+    console.log('true');
+  }
+  else{
+    console.log('false');
+  }
+}
+
 
 // ----------------------
 // Stretch Goals
