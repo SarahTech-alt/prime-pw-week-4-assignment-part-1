@@ -62,7 +62,7 @@ function getLast( array ) {
   return array[array.length-1];
 }
 
-let numbers = [1, 4, 6, 3];
+let numbers = [1, 4, 6, 3, -8, 6, 0, -2];
 let pumpkins = [];
 
 console.log(getLast(numbers));
@@ -72,28 +72,19 @@ console.log(getLast(pumpkins));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 
+//this exits the loop after return statement
+
 function find( value, array ){
   for (let number of array){
     if (number === value){
       return true;
     }
-    else{
-      return false;
-    }
   }
+  return false;
 }
 
+console.log(find(8, numbers));
 console.log(find(4, numbers));
-
-for (let number of numbers){
-  if (number > 4){
-    console.log('true');
-  }
-  else{
-    console.log('false');
-  }
-}
-
 
 // ----------------------
 // Stretch Goals
@@ -107,17 +98,32 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
-  let sum = 0
-  // TODO: loop to add items
+function sumAll( array ) {
+  let sum = 0;
+  for (let values of array){
+    sum += values;
+  }
   return sum;
 }
+
+console.log( sumAll(numbers));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+function returnNumbers( array ) {
+  let newArray = [];
+  for (let number of array){
+    if (number > 0){
+      newArray.push(number);
+    }
+  }
+  return newArray;
+}
 
+
+console.log(returnNumbers(numbers));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
