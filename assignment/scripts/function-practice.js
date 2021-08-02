@@ -127,4 +127,12 @@ console.log(returnNumbers(numbers));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
+
+//Problem: This code does not execute properly. Try to figure out why.
+
+function multiply(a, b){
+  a * b
+}
+
+// It does not execute because it is not returning anything. It is saying to multiply a times b, but does not have anythign to do with the resulting value.
 //     here in a comment, write the function, and test it!
