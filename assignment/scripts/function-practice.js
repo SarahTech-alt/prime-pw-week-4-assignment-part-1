@@ -32,8 +32,8 @@ console.log(addNumbers(4,5));
 
 // 4. Function to multiply three numbers & return the result
 
-function multiplyThree(firstNumber, secondNumber, thridNumber ){
-  return firstNumber * secondNumber * thridNumber;
+function multiplyThree(firstNumber, secondNumber, thirdNumber ){
+  return firstNumber * secondNumber * thirdNumber;
 }
 
 console.log(multiplyThree(1, 4, 5));
@@ -91,11 +91,34 @@ console.log(find(4, numbers));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
 
+//testing index function of a string
+let word = "pear";
+console.log(word[0]);
+
+function isFirstLetter(letter, string) {
+  let str = string.toLowerCase();
+  let lowerLetter = letter.toLowerCase();
+  if (str[0] === lowerLetter){
+    return true;
+  }
+  return false;
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( 'isFirstLetter - should say true', isFirstLetter('A', 'apple') );
+
+//testing previous function with 'equal to' instead of 'striclty equal to' for case sensitivity
+
+function isFirstLetter(letter, string) {
+  if (string[0] == letter){
+    return true;
+  }
+  return false;
+}
+console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
+console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( 'isFirstLetter - should say true if equal to is not case sensitive', isFirstLetter('A', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( array ) {
@@ -106,7 +129,12 @@ function sumAll( array ) {
   return sum;
 }
 
-console.log( sumAll(numbers));
+//created second array to test function
+
+let numbers2 = [-1,5,6,3,0];
+
+console.log(sumAll(numbers));
+console.log(sumAll(numbers2));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -122,8 +150,8 @@ function returnNumbers( array ) {
   return newArray;
 }
 
-
 console.log(returnNumbers(numbers));
+console.log(returnNumbers(numbers2));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
