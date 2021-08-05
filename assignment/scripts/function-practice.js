@@ -162,5 +162,12 @@ function multiply(a, b){
   a * b
 }
 
-// It does not execute because it is not returning anything. It is saying to multiply a times b, but does not have anythign to do with the resulting value.
+// It does not execute because it is not returning anything. It is saying to multiply a times b, but does not have anything to do with the resulting value.
 //     here in a comment, write the function, and test it!
+
+function multiply(a,b){
+  return a*b;
+}
+
+console.log(multiply(2,3));
+console.log(multiply(-1,8));
